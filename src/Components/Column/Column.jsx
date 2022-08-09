@@ -7,7 +7,7 @@ export default function Column() {
     <header>Brainstorm</header>
     <ul className='task-list'>
         <Task/>
-        <li className='task-item'>Hôm nay có cái gì đó ở Tôn Đức Nam</li>
+        <Task/>
         <li className='task-item'>Hôm nay có cái gì đó ở Tôn Đức Nam</li>
         <li className='task-item'>Hôm nay có cái gì đó ở Tôn Đức Nam</li>
         <li className='task-item'>Hôm nay có cái gì đó ở Tôn Đức Nam</li>

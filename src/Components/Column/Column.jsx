@@ -1,18 +1,18 @@
-import Task from 'Components/Task/Task'
+import Card from 'Components/Card/Card'
 import React from 'react'
 import "./Column.scss"
-export default function Column() {
+import {  mapOrder} from "utilities/sorts";
+export default function Column(props) {
+  let {column}= props;
+  let cards=mapOrder(column.cards,column.cardOrder,'id')
+  
   return (
     <div className='column'>
-    <header>Brainstorm</header>
-    <ul className='task-list'>
-        <Task/>
-        <li className='task-item'>Hôm nay có cái gì đó ở Tôn Đức Nam</li>
-        <li className='task-item'>Hôm nay có cái gì đó ở Tôn Đức Nam</li>
-        <li className='task-item'>Hôm nay có cái gì đó ở Tôn Đức Nam</li>
-        <li className='task-item'>Hôm nay có cái gì đó ở Tôn Đức Nam</li>
-        <li className='task-item'>Hôm nay có cái gì đó ở Tôn Đức Nam</li>
-        <li className='task-item'>Hôm nay có cái gì đó ở Tôn Đức Nam</li>
+    <header>{column.title}</header>
+    <ul className='card-list'>
+      {cards.map((card,index) => <Card key={card.id} card={card}/> )}
+    
+        
     </ul>
     <footer>Thêm card mới</footer>
 </div>

@@ -3,6 +3,7 @@
 
 .board-content{
    height: $board-content-height;
+   display: flex;
     overflow-x: auto;
     overflow-y: hidden;
     &::-webkit-scrollbar{
@@ -20,5 +21,19 @@
       border: 1px dashed #abc;
       margin: 5px 45px 5px 5px;
     }
-    
+    .new-columns{
+      font-size: 15px;
+      width: 300px;
+      height: 40px;
+      line-height: 32px;
+      padding: 4px 0 4px 15px;
+      cursor: pointer;
+      color: white;
+      margin-left: $gap;
+      border-radius: $column-border-radius;
+      background-color: hsla(0, 0%, 100%, 0.24);
+      &:hover{
+         background-color: hsla(0, 0%, 100%, 0.453);
+      }
+    }
 }

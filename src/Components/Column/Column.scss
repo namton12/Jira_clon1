@@ -2,11 +2,10 @@
 $column-height:calc(#{$board-content-height} - #{$gap * 2});
 .column{
     flex: 0 0 auto;
-    width: 300px;
+    width: 370px;
     height: $column-height;
     > * {
        background-color: $list-bg-color;
-       color: #333;
        padding: 0 8px;
     }
     margin-left: $gap;
@@ -21,10 +20,19 @@ $column-height:calc(#{$board-content-height} - #{$gap * 2});
     }
     footer{
         padding-left: 10px;
+        font-size: 15px;
+        color: #888;
         height: $column-footer-height;
         line-height: $column-footer-height;
         border-bottom-left-radius: $column-border-radius;
         border-bottom-right-radius: $column-border-radius;
+        .footer-actions{
+          margin-left: $gap;
+          cursor: pointer;
+          &:hover{
+            color:$app-bg-color;
+          }
+        }
     }
     .card-list{
         list-style-type: none;
@@ -43,7 +51,8 @@ $column-height:calc(#{$board-content-height} - #{$gap * 2});
          }
          .card-ghost {
             transition: transform 0.18s ease;
-            transform: rotateZ(5deg)
+            transform: rotateZ(5deg);
+            font-weight : bold;
           }
           
           .card-ghost-drop{

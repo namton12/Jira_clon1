@@ -1,8 +1,8 @@
-import logo from './logo.svg';
-import './App.scss';
-import Appbar from './Components/Appbar/Appbar';
-import BoardBar from './Components/BoardBar/BoardBar';
-import BoardContent from './Components/BoardContent/BoardContent';
+
+import './App.scss'
+import Appbar from './Components/Appbar/Appbar'
+import BoardBar from './Components/BoardBar/BoardBar'
+import BoardContent from './Components/BoardContent/BoardContent'
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <BoardBar/>
       <BoardContent/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

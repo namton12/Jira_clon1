@@ -38,4 +38,15 @@ input[type=number]:focus,
 [contenteditable].form-control:focus {
   box-shadow: none;
 }
+.btn:focus , .btn:active{
+    outline: none !important;
+    box-shadow: none !important;
+}
+}
+
+.Clone-trello {
+ background-color: inherit;
+ border: none;
+ font-size: inherit;
+ font-weight: inherit;
 }

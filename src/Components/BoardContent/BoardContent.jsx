@@ -88,7 +88,9 @@ export default function BoardContent() {
     setColumns(newColumns)
     setBoard(newBoard)
   }
+  const onAddNewCardColumn = (newColumn) => {
 
+  }
   return (
     <div className="board-content">
       <Container
@@ -104,11 +106,12 @@ export default function BoardContent() {
       >
         {columns.map((column, index) => (
           <Draggable key={index}>
-            <Column column={column} onCardDrop={onCardDrop} onUpdateColumn={onUpdateColumn} />
+            <Column column={column}
+              onCardDrop={onCardDrop}
+              onUpdateColumn={onUpdateColumn} />
           </Draggable>
         ))}
       </Container>
-
       <ContainerBoostrap className='trello-container'>
         {!newColumns &&
           <Row>

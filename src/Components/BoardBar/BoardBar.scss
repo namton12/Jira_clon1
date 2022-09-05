@@ -1,10 +1,77 @@
 @import'../../_setting.scss';
 
-.navbar-board{
+.board-app {
     height: $navbar-board-height;
-    padding-left:$gap ;
-    display: flex;
-    align-items: center;
     background-color: $board-bg-color;
-    font-size: 1.1rem;
-}
+    padding-left: $gap;
+  
+    button.boardbar-btn {
+      color: #fff;
+      outline: none;
+      border: none;
+      background-color: #4a94bf;
+      padding: 8px;
+      border-radius: 3px;
+      font-size: 20px;
+      display: inline-block;
+      margin: 3px;
+  
+      .boardbar-btn-text {
+        margin-left: $gap;
+        font-weight: bold;
+        font-size: 18px;
+      }
+  
+      &.btn-red {
+        background-color: #f02849;
+      }
+    }
+  
+    .circle-image {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      border: none;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  
+    .boardbar-left {
+      float: left;
+      display: flex;
+  
+      .cut-btn {
+        font-size: 25px;
+        opacity: 0.5;
+        color: #fff;
+        margin: 10px;
+  
+        &::after {
+          content: '|';
+        }
+      }
+  
+      .boardbar-list-image {
+        display: flex;
+        margin-right: 10px;
+  
+        .circle-btn {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          border: none;
+          background-color: #4a94bf;
+          color: #fff;
+          font-size: 20px;
+        }
+      }
+    }
+  
+    .boardbar-right {
+      float: right;
+    }
+  }
+  
